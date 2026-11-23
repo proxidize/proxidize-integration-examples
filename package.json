@@ -1,0 +1,29 @@
+{
+  "name": "proxidize-integration-examples",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runnable Proxidize proxy integrations for HTTP clients, browser automation, and crawling tools",
+  "homepage": "https://proxidize.com/integrations/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/proxidize/proxidize-integration-examples.git"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check examples/node/proxy-config.mjs && node --check examples/node/undici.mjs && node --check examples/axios/check_proxy.mjs && node --check examples/playwright/node.mjs && node --check examples/puppeteer/check_proxy.mjs",
+    "live:node": "node --env-file=.env.local examples/node/undici.mjs",
+    "live:axios": "node --env-file=.env.local examples/axios/check_proxy.mjs",
+    "live:playwright": "node --env-file=.env.local examples/playwright/node.mjs",
+    "live:puppeteer": "node --env-file=.env.local examples/puppeteer/check_proxy.mjs"
+  },
+  "dependencies": {
+    "axios": "1.21.1",
+    "playwright": "1.65.1",
+    "puppeteer": "25.18.1",
+    "undici": "8.13.1"
+  }
+}
