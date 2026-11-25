@@ -17,7 +17,7 @@ Choose a runnable example below, then open its Proxidize guide for setup details
 | Axios | Node.js 24+ | Mobile or residential HTTPS | [`check_proxy.mjs`](examples/axios/check_proxy.mjs) | [Axios integration](https://proxidize.com/integrations/axios/) |
 | Requests | Python 3.11.5+ | Mobile or residential HTTPS | [`requests_example.py`](examples/python/requests_example.py) | [Requests and HTTPX integration](https://proxidize.com/integrations/python-requests-httpx/) |
 | HTTPX | Python 3.11.5+ | Mobile or residential HTTPS | [`httpx_example.py`](examples/python/httpx_example.py) | [Requests and HTTPX integration](https://proxidize.com/integrations/python-requests-httpx/) |
-| AgentMail price monitor | Python 3.11.5+ | Residential HTTPS | [`monitor.py`](examples/agentmail-price-monitor/monitor.py) | [AI price monitoring agent tutorial](https://proxidize.com/blog/ai-price-monitoring-agent-email-alerts/) |
+| AgentMail price monitor | Python 3.11.5+ | Residential HTTPS | [`monitor.py`](examples/agentmail-price-monitor/monitor.py) | [AgentMail integration](https://proxidize.com/integrations/agentmail/) |
 | aiohttp | Python 3.11.5+ | Mobile or residential HTTP(S) | [`check_proxy.py`](examples/aiohttp/check_proxy.py) | [aiohttp integration](https://proxidize.com/integrations/python-aiohttp/) |
 | PycURL | Python 3.11.5+ | Mobile or residential HTTPS | [`check_proxy.py`](examples/pycurl/check_proxy.py) | [PycURL integration](https://proxidize.com/integrations/pycurl/) |
 | Playwright | Node.js 24+ | Mobile or residential HTTPS | [`node.mjs`](examples/playwright/node.mjs) | [Playwright integration](https://proxidize.com/integrations/playwright/) |
