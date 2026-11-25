@@ -58,6 +58,24 @@ The eight integrations added after the original live run were validated without 
 
 Java, C#, and Ruby require an HTTP proxy endpoint for these standard-library configurations. The Go, Axios, aiohttp, PycURL, and PHP cURL examples accept the HTTP or HTTPS scheme supported by their clients.
 
+## AgentMail price-monitor workflow
+
+The AgentMail workflow received an additional controlled validation on November 25, 2026.
+
+| Check | Result |
+| --- | --- |
+| Discover the assigned inbox from an inbox-scoped key with `auth.me()` | Passed |
+| List messages within that key's inbox scope | Passed |
+| Send a controlled workflow message | Passed |
+| Repeat the identical send with one idempotency key | Passed; the API returned the same message and thread IDs |
+| Retrieve the sent message and its thread | Passed |
+| Reply and preserve the original thread | Passed |
+| Run the repository's baseline-to-price-change fixture through the real gateway | Passed; the alert ledger recorded a retrievable message and thread |
+| Reject unauthorized or non-exact reply commands | Passed in credential-free tests |
+| Preserve a failed price-change observation for a safe retry | Passed in credential-free tests |
+
+The API validation used one inbox-scoped key and a controlled self-addressed message. It did not test delivery to an unrelated external address. No key, email address, message ID, thread ID, or message content is stored in this repository.
+
 ## UDP acceptance criteria
 
 The UDP test was considered successful only after all of these stages completed:
