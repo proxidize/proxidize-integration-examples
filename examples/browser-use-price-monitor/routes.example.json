@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "routes": [
+    {
+      "label": "us-sticky",
+      "country_code": "US",
+      "session_mode": "sticky",
+      "username": "username-generated-for-a-us-sticky-session"
+    },
+    {
+      "label": "us-rotating",
+      "country_code": "US",
+      "session_mode": "rotating",
+      "username_template": "username-from-session-builder-with-{session_id}-in-place-of-the-session-token"
+    }
+  ]
+}

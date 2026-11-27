@@ -1,0 +1,19 @@
+{
+  "product_key": "demo-running-shoes",
+  "target_url": "https://example.com/authorized-product",
+  "route_label": "us-sticky",
+  "expected_country_code": "US",
+  "session_mode": "sticky",
+  "agent_output": {
+    "status": "ok",
+    "product_name": "Demo running shoes",
+    "price": "129.00",
+    "currency": "USD",
+    "source_url": "https://example.com/authorized-product",
+    "observed_country_code": "US",
+    "observed_region": "New York",
+    "observed_city": "New York",
+    "evidence": "The product card displayed Demo running shoes at USD 129.00.",
+    "error": ""
+  }
+}

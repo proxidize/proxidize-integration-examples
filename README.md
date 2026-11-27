@@ -18,6 +18,7 @@ Choose a runnable example below, then open its Proxidize guide for setup details
 | Requests | Python 3.11.5+ | Mobile or residential HTTPS | [`requests_example.py`](examples/python/requests_example.py) | [Requests and HTTPX integration](https://proxidize.com/integrations/python-requests-httpx/) |
 | HTTPX | Python 3.11.5+ | Mobile or residential HTTPS | [`httpx_example.py`](examples/python/httpx_example.py) | [Requests and HTTPX integration](https://proxidize.com/integrations/python-requests-httpx/) |
 | AgentMail price monitor | Python 3.11.5+ | Residential HTTPS | [`monitor.py`](examples/agentmail-price-monitor/monitor.py) | [AgentMail integration](https://proxidize.com/integrations/agentmail/) |
+| Browser Use price monitor | Python 3.11.5+ | Residential HTTP(S) | [`price_monitor.py`](examples/browser-use-price-monitor/price_monitor.py) | [Browser Use integration](https://proxidize.com/integrations/browser-use/) |
 | aiohttp | Python 3.11.5+ | Mobile or residential HTTP(S) | [`check_proxy.py`](examples/aiohttp/check_proxy.py) | [aiohttp integration](https://proxidize.com/integrations/python-aiohttp/) |
 | PycURL | Python 3.11.5+ | Mobile or residential HTTPS | [`check_proxy.py`](examples/pycurl/check_proxy.py) | [PycURL integration](https://proxidize.com/integrations/pycurl/) |
 | Playwright | Node.js 24+ | Mobile or residential HTTPS | [`node.mjs`](examples/playwright/node.mjs) | [Playwright integration](https://proxidize.com/integrations/playwright/) |
@@ -166,6 +167,19 @@ uv run --env-file .env.agentmail.local \
 ```
 
 See [`examples/agentmail-price-monitor/README.md`](examples/agentmail-price-monitor/README.md) for the deterministic fixture, reply commands, and security boundaries.
+
+The Browser Use Cloud V4 price monitor has its own route file and deterministic output fixture:
+
+```bash
+cp examples/browser-use-price-monitor/.env.example .env.browser-use.local
+mkdir -p .local
+cp examples/browser-use-price-monitor/routes.example.json \
+  .local/browser-use-price-monitor-routes.json
+uv run python examples/browser-use-price-monitor/price_monitor.py fixture \
+  examples/browser-use-price-monitor/fixtures/us-observation.json
+```
+
+See [`examples/browser-use-price-monitor/README.md`](examples/browser-use-price-monitor/README.md) for Browser Use custom-proxy eligibility, geographic routes, sticky sessions, and rotation boundaries.
 
 ### cURL, PHP, Go, Java, C#, and Ruby
 

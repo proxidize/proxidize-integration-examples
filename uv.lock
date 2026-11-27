@@ -506,6 +506,20 @@ wheels = [
 ]
 
 [[package]]
+name = "browser-use-sdk"
+version = "3.12.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "idna" },
+    { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/eb/3f/f315f76246b0793cbb287c5373541eaec86736cd6b7a25410c8664d7564e/browser_use_sdk-3.12.1.tar.gz", hash = "sha256:94c2a870e5ec5072b21661a6f4fecbf106dabe1c40e8790c6702081c52f39d2f", size = 74124, upload-time = "2026-10-17T04:34:08.005Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/00/37/691c9185d6736bf58995500fe019bef4fa818c29031b682dbe20bb3534a6/browser_use_sdk-3.12.1-py3-none-any.whl", hash = "sha256:4b3be371f38b4103384b7288dacdfc90d1265d06912d56974f9d67fcbe605fd7", size = 100214, upload-time = "2026-10-17T04:34:06.794Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.11.20"
 source = { registry = "https://pypi.org/simple" }
@@ -2694,6 +2708,7 @@ dependencies = [
     { name = "agentmail" },
     { name = "aiohttp" },
     { name = "aioquic" },
+    { name = "browser-use-sdk" },
     { name = "certifi" },
     { name = "httpx" },
     { name = "playwright" },
@@ -2714,6 +2729,7 @@ requires-dist = [
     { name = "agentmail", specifier = "==2.0.26" },
     { name = "aiohttp", specifier = "==3.14.5" },
     { name = "aioquic", specifier = "==1.9.1" },
+    { name = "browser-use-sdk", specifier = "==3.12.1" },
     { name = "certifi", specifier = "==2026.11.20" },
     { name = "crawl4ai", marker = "extra == 'crawlers'", specifier = "==0.9.5" },
     { name = "httpx", specifier = "==0.28.1" },
